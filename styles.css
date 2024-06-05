@@ -1,0 +1,304 @@
+/* Style the logo image */
+.logo-img {
+  width: 150px; /* adjust the width to your liking */
+  height: auto; /* maintain the aspect ratio */
+}
+
+/* Style the navigation bar */
+.topnav {
+  overflow: hidden; /* hide the overflow of the navigation bar */
+  background-color: #333; /* set the background color of the navigation bar */
+}
+
+/* Style the navigation links */
+.topnav a {
+  float: left; /* float the links to the left */
+  color: #f2f2f2; /* set the color of the links */
+  text-align: center; /* center the text of the links */
+  padding: 14px 16px; /* add some padding to the links */
+  text-decoration: none; /* remove the underline from the links */
+  font-family: monospace;
+  font-size: 18px;
+}
+
+/* Style the active link */
+.topnav a.active {
+  background-color: #7B7D7D; /* set the background color of the active link */
+  color: white; /* set the color of the active link */
+}
+
+/* Style the links on hover */
+.topnav a:hover {
+  background-color: #ddd; /* set the background color of the links on hover */
+  color: black; /* set the color of the links on hover */
+}
+
+/* Style the navigation menu icon */
+.topnav .icon {
+  display: none; /* hide the icon on larger screens */
+}
+
+/* Style the navigation menu when the screen is smaller than 800px */
+@media screen and (max-width: 800px) {
+  .topnav a:not(:first-child) {display: none;} /* hide all the links except the first one */
+  .topnav a.icon {
+    float: right; /* float the icon to the right */
+    display: block; /* show the icon on smaller screens */
+  }
+}
+
+/* Style the navigation menu when the user clicks on the icon */
+@media screen and (max-width: 800px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute; /* position the icon absolutely */
+    right: 0; /* move the icon to the right */
+    top: 0; /* move the icon to the top */
+  }
+  .topnav.responsive a {
+    float: none; /* float the links to none */
+    display: block; /* show the links on smaller screens */
+    text-align: left; /* center the text of the links */
+  }
+}
+
+.banner {
+  width: 100%; /* set the width of the banner to 100% of the container */
+  height: auto; /* maintain the aspect ratio of the banner */
+  display: block; /* display the banner as a block element */
+  margin-bottom: 20px; /* add some margin at the bottom of the banner */
+}
+
+
+body {
+  font-family: monospace; /* add this line to make all text on the page monospace */
+}
+
+
+
+
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    
+    text-transform: capitalize;
+    transition:all .2s cubic-bezier(.34,1.12,.68,1.31);
+}
+
+
+
+
+
+
+
+
+.social-media {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+
+.social-media a {
+  font-size: 24px;
+  color: #333;
+  text-decoration: none;
+  transition: color.3s;
+}
+
+.social-media a:hover {
+  color: #666;
+}
+
+
+
+/* Gallery */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+
+* {box-sizing: border-box}
+
+/* Container needed to position the overlay. Adjust the width as needed */
+.container-image {
+  position: relative;
+  width: 80%;
+  max-width: 600px;
+  display: flex; /* add this to use flexbox */
+  justify-content: center; /* center the container horizontally */
+  margin: 40px auto; /* add some margin to create space */
+}
+
+/* Make the image to responsive */
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* The overlay effect - lays on top of the container and over the image */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1;
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+/* When you mouse over the container, fade in the overlay title */
+.container-image:hover .overlay {
+  opacity: 1;
+}
+
+
+
+
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+
+/* Number text (1/6 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 10px;
+  width: 10px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 30%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+
+
+
+
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  clear: both;
+  border-top: 1px solid #444;
+  font-family: monospace;
+}
+
+.footer.container {
+  max-width: 1200px; /* adjust the width to match your menu navigation box */
+  margin: 0 auto;
+  padding: 10px;
+}
